@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactTransitionGroup from 'react-transition-group'
 
 import Head from 'next/head'
 import Router from 'next/router'
-import styled, { styleSheet } from 'styled-components'
+import styled from 'styled-components'
 
 import ForkThis from '../components/ForkThis'
 import Header from '../components/Header'
