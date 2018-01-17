@@ -1,9 +1,12 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+
 import Router from 'next/router'
 
 import { setToken, checkSecret, extractInfoFromHash } from '../../utils/auth'
 
 export default class SignedIn extends React.Component {
+
   static propTypes = {
     url: PropTypes.object.isRequired
   }
@@ -16,7 +19,9 @@ export default class SignedIn extends React.Component {
     setToken(token)
     Router.push('/')
   }
+  
   render () {
     return null
   }
+
 }
