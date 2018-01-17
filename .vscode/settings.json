@@ -6,5 +6,7 @@
     "**/.hg": true,
     "**/.DS_Store": true,
     "**/.next": true
-  }
+  },
+  "eslint.enable": false,
+  "jshint.enable": false
 }
