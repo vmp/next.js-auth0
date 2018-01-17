@@ -66,11 +66,6 @@ export default Page => class DefaultPage extends React.Component {
             }
             `}
           </style>
-          {/* {!process.browser && (
-            <style>
-              {styleSheet.getCSS()}
-            </style>
-          )} */}
           <title>Next.js + auth0</title>
         </Head>
         <ForkThis />
