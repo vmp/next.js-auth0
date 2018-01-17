@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Router from 'next/router'
-import styled, { styleSheet } from 'styled-components';
+import styled, { styleSheet } from 'styled-components'
 
 import ForkThis from '../components/ForkThis'
 import Header from '../components/Header'
@@ -19,7 +19,7 @@ const Main = styled.div`
 `
 
 export default Page => class DefaultPage extends React.Component {
-  static getInitialProps(ctx) {
+  static getInitialProps (ctx) {
     const loggedUser = process.browser ? getUserFromLocalCookie() : getUserFromServerCookie(ctx.req)
     const pageProps = Page.getInitialProps && Page.getInitialProps(ctx)
     return {
@@ -30,27 +30,21 @@ export default Page => class DefaultPage extends React.Component {
     }
   }
 
-  constructor(props) {
-    super(props)
-
-    this.logout = this.logout.bind(this)
-  }
-
-  logout(eve) {
+  logout = (eve) => {
     if (eve.key === 'logout') {
       Router.push(`/?logout=${eve.newValue}`)
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     window.addEventListener('storage', this.logout, false)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     window.removeEventListener('storage', this.logout, false)
   }
 
-  render() {
+  render () {
     const cssFiles = [
       'https://unpkg.com/normalize.css@5.0.0/normalize.css'
     ]
