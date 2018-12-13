@@ -1,24 +1,13 @@
-# next.js-auth0
-a simple example that shows how to use next.js with auth0
+# DO NOT USE THIS IN PRODUCTION
 
-You can access a simple demo here: https://nextjs-auth0.now.sh
+## this repo is deprecated
 
-## Setup
 
-* Install [yarn](https://yarnpkg.com/en/docs/install/)
-* Create an account at Auth0 (https://auth0.com)
-* Add your endpoints to your client's allowed urls like this ![](https://i.imgur.com/KmIc96g.png)
-* Add your logout endpoint to your account allowed urls like this ![](https://i.imgur.com/5qZYSQ8.png)
-* Copy the file `config.sample.json` at the root folder, rename it as `config.json` and add your Auth0 keys
+I built this repo when I was just playing around with Auth0 and NextJS. Now that I'm working at Auth0 for almost 2 years, I can say that it is the wrong approach to use. Auth0 will be releasing guidance on this in the near future, but the short explanation is: 
 
-## Running Locally
+## Regarding authentication, treat your SSR apps as server apps.
 
-```
-git clone https://github.com/luisrudge/next.js-auth0.git
-cd next.js-auth0
-yarn
-yarn dev
-```
+- Create a custom server handler
+- Follow our [guidance](https://auth0.com/docs/quickstart/webapp/nodejs/01-login) on how to secure NodeJS server apps
+- Profit :moneybag:
 
-## Deploying to [now.sh](https://zeit.co/now/)
-If you want to deploy to `now`, make sure you update your `package.json` file's `now.alias` configuration key to your own alias.
